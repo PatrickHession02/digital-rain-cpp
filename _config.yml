@@ -9,3 +9,6 @@ description: "A blog."
 # Build settings
 remote_theme: jekyll/minima
 
+plugins:
+- jekyll-remote-theme
+
