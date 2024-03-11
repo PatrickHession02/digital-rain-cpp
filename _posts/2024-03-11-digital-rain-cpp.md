@@ -4,8 +4,8 @@ title: A Project in Modern C++
 tags: cpp coding project
 categories: demo
 ---
-
-This is my first paragraph..
+## Introduction
+In the following blog I will explain the process that went into making my C++ digital Rain Project. The project brief was to develop a modern C++ console application to execute my own interpretation of Digital Rain
 
 ## This is a Heading
 
