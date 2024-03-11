@@ -1,10 +1,10 @@
 # Site settings
-title:Digital Rain C++ Blog
+title: C++ Blog
 
 author:
-  name: patrick Hession
+  name: Patrick Hession
   email: your-email@domain.com
-description: "A blog."
+description: "A website."
 
 # Build settings
 remote_theme: jekyll/minima
