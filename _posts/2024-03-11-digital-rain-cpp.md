@@ -42,11 +42,16 @@ Adding Elements: The push_back() function is used to add elements to the end of 
 Accessing Elements: Elements can be accessed using the at() function or the operator[]. The front() and back() functions provide access to the first and last elements of the vector.
 Modifying Elements: Elements can be modified using the operator[] or the at() function.
 Removing Elements: The erase() function can be used to remove elements from a vector.
-Iterating Over Elements: Vectors can be iterated over using iterators or range-based for loops.
+Iterating Over Elements: Vectors can be iterated over using iterators or range-based for loops. 
+
 ## Algorithim
 
+
 ## Problem Solving
-A major problem I had with my project
+A major problem I had with my project is after I changed ar
 ## Modern C++ 
 
 ## References
+Vector in C++ STL geeksforgeeks https://www.geeksforgeeks.org/vector-in-cpp-stl/?ref=lbp Accessed: 20/3/24 [1]
+
+
