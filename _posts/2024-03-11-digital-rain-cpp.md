@@ -25,8 +25,8 @@ A bullet list:
 
 
 
-<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/docs/assets/images/Screenshot 2024-03-22 110117.png" width="400" height="400">
-<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 111744.png" width="400" height="400">
+<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 110117.png" width="400" height="600">
+<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 111744.png" width="400" height="600">
 
 
 ## Design and Test
