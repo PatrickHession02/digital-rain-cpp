@@ -26,8 +26,8 @@ A bullet list:
 You can add an image that has been uploaded to the repository in a /docs/assets/images folder.
 
 
-<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 110117.png" width="100" height="100">
-<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 111744.png" width="100" height="100">
+<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 110117.png" width="400" height="400">
+<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 111744.png" width="400" height="400">
 ## Design and Test
 #Vectors
 Vectors in modern C++ are dynamic arrays that can grow and shrink in size as needed. They are part of the C++ Standard Template Library (STL) and are defined in the <vector> header file. Vectors are designed to store elements of the same data type and provide a range of functionalities for manipulating these elements, such as adding, accessing, modifying, and removing elements.
