@@ -25,7 +25,7 @@ A bullet list:
 
 You can add an image that has been uploaded to the repository in a /docs/assets/images folder.
 <video width="320" height="240" controls>
-  <source src="[video.mp4](https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/docs/assets/images/59171580-d20d-4a11-b4e6-134a5be9dc92.mp4)" type="video/mp4">
+  <source src="(https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/docs/assets/images/59171580-d20d-4a11-b4e6-134a5be9dc92.mp4)" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
