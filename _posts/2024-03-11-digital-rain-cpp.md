@@ -49,7 +49,7 @@ Iterating Over Elements: Vectors can be iterated over using iterators or range-b
 
 
 ## Problem Solving
-A major problem I had with my project is after I changed ar
+A probelm i encountered while
 ## Modern C++ 
 
 ## References
