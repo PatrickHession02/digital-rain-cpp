@@ -26,7 +26,7 @@ A bullet list:
 You can add an image that has been uploaded to the repository in a /docs/assets/images folder.
 
 
-<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/59171580-d20d-4a11-b4e6-134a5be9dc92.mp4" width="400" height="400">
+<img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/docs/assets/images/59171580-d20d-4a11-b4e6-134a5be9dc92.mp4" width="400" height="400">
 <img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 111744.png" width="400" height="400">
 
 
