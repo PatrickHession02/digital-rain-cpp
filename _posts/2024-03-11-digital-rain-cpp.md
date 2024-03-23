@@ -70,8 +70,8 @@ The code I've written implements threads and mutexes for efficient concurrency a
      }
 ```
 Finally, the runAllFunctions() function serves as the entry point, orchestrating the execution of all functions within the namespace, resulting in a visually captivating simulation of the iconic digital rain effect from the Matrix universe.
-```
-    // Function to call all functions in the namespace
+
+``` // Function to call all functions in the namespace
     void runAllFunctions() {
         char randomChar = getRandomChar();
         std::vector<std::vector<char>> matrix(MATRIX_HEIGHT, std::vector<char>(MATRIX_WIDTH, 'X'));
