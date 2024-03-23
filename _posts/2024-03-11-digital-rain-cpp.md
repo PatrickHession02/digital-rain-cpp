@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Project in Modern C++
+title: C++ DIgital Rain
 tags: cpp coding project
 categories: demo
 ---
@@ -68,9 +68,9 @@ The code I've written implements threads and mutexes for efficient concurrency a
      for (int i = 0; i < NUM_DROPS; ++i) {
          raindrops[i].join();
      }
-````
+```
 Finally, the runAllFunctions() function serves as the entry point, orchestrating the execution of all functions within the namespace, resulting in a visually captivating simulation of the iconic digital rain effect from the Matrix universe.
-``
+```
     // Function to call all functions in the namespace
     void runAllFunctions() {
         char randomChar = getRandomChar();
@@ -78,7 +78,7 @@ Finally, the runAllFunctions() function serves as the entry point, orchestrating
         printMatrixWithRaindrop(matrix);
         simulateRaindrops();
     }
-    ``
+ ```
     
 ## Testing
 I found writing tests for the code a bit more challenging due to the randominess of the effect being implemented.The MatrixRainTest namespace encapsulates a set of functions designed to test various components of the Matrix rain effect implementation. These functions serve to ensure the correctness and reliability of key functionalities.
