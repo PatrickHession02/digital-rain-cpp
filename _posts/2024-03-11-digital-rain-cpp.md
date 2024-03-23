@@ -79,7 +79,8 @@ Finally, the runAllFunctions() function serves as the entry point, orchestrating
         simulateRaindrops();
     }
     ``
-    ## Testing
+    
+## Testing
 I found writing tests for the code a bit more challenging due to the randominess of the effect being implemented.The MatrixRainTest namespace encapsulates a set of functions designed to test various components of the Matrix rain effect implementation. These functions serve to ensure the correctness and reliability of key functionalities.
 
     // Test getRandomChar() function
@@ -91,10 +92,32 @@ I found writing tests for the code a bit more challenging due to the randominess
     
 Firstly, the testGetRandomChar() function verifies the behavior of the getRandomChar() function, which generates a random ASCII character within the range of printable characters. The test asserts that the generated character falls within this range and outputs a confirmation message upon successful execution.
 
+```// Test printMatrixWithRaindrop() function
+void testPrintMatrixWithRaindrop() {
+    std::vector<std::vector<char>> matrix(MatrixFall::MATRIX_HEIGHT, std::vector<char>(MatrixFall::MATRIX_WIDTH, 'X')); // Initialize matrix with 'X'
+    MatrixFall::printMatrixWithRaindrop(matrix);
+    std::cout << "printMatrixWithRaindrop() test passed!" << std::endl;
+} 
+```
+
 Similarly, the testPrintMatrixWithRaindrop() function evaluates the printMatrixWithRaindrop() function, which prints the matrix representing the raindrop effect. In this test, a matrix initialized with 'X' characters is passed to printMatrixWithRaindrop(), and the resulting output is visually inspected to confirm the correct rendering of the raindrop effect. Upon completion, a confirmation message is displayed to signify the success of the test.
 
-Due to the dynamic and randomized nature of the simulateRaindrop() function, direct testing is not feasible. Instead, the testSimulateRaindrop() function acknowledges this limitation and suggests visual inspection as a means to assess its behavior. This function serves as a placeholder to remind developers of the need for manual validation during testing.
+```
+   void testSimulateRaindrop() {
+       // We can't do a direct test of simulateRaindrop() due to its animation and randomness.
+       // But we can test its behavior indirectly by observing the output visually and checking for exceptions.
+       std::cout << "simulateRaindrop() test passed! (Visual inspection required)" << std::endl;
+   }
+   ```
+Due to the dynamic and randomized nature of the simulateRaindrop() function, direct testing is not feasible. Instead, the testSimulateRaindrop() function acknowledges this limitation and suggests visual inspection as a means to assess its behavior. 
 
+```
+    void runAllTests() {
+        MatrixRainTest::testGetRandomChar();
+        MatrixRainTest::testPrintMatrixWithRaindrop();
+        MatrixRainTest::testSimulateRaindrop();
+    }
+```
 Finally, the runAllTests() function orchestrates the execution of all test functions within the namespace, ensuring comprehensive validation of the Matrix rain effect implementation. Each test function is invoked sequentially, and upon completion of all tests, a confirmation message is displayed to indicate successful testing completion.
 
 
@@ -135,38 +158,38 @@ A problem i encountered while created my Digital Rain project was when i would r
     }
     
 
-The code snippet employs std::lock_guard to manage a mutex, ensuring that only one thread can access memory at a time, which prevents the screen from displaying random bursts of characters. This mechanism automatically unlocks the mutex when the lock_guard object goes out of scope. This is a fundamental aspect of RAII (Resource Acquisition Is Initialization) in C++, guaranteeing that resources are properly released, even if an exception occurs within the scope. This automatic unlocking mechanism prevents deadlocks and ensures thread safety by releasing the lock when the scope in which the lock_guard was created is exited.
+The code snippet employs std::lock_guard to manage a mutex, ensuring that only one thread can access memory at a time, which prevents the screen from displaying random bursts of characters. This mechanism automatically unlocks the mutex when the lock_guard object goes out of scope. This is a fundamental aspect of RAII (Resource Acquisition Is Initialization) in C++, guaranteeing that resources are properly released, even if an exception occurs within the scope. This automatic unlocking mechanism prevents deadlocks and ensures thread safety by releasing the lock when the scope in which the lock_guard was created is exited.[4]
 
 ## Modern C++ 
 My code showcases various aspects of Modern C++ design philosophy, leveraging the language's standard library features and modern programming paradigms to achieve concurrency, robustness, and maintainability.
 
 **Standard Library Containers (`std::vector`):**
-  - The code utilizes `std::vector` for managing two-dimensional data (matrix) representing the raindrop animation. Vectors provide dynamic arrays with automatic memory management, allowing for flexible storage of elements.
+  - The code utilizes `std::vector` for managing two-dimensional data (matrix) representing the raindrop animation. Vectors provide dynamic arrays with automatic memory management, allowing for flexible storage of elements.[1]
 
 - **Modern Random Number Generation (`std::rand()` replaced with `<random>`):**
-  - Instead of using the older `rand()` function, the code employs `std::rand()` and `<random>` header for random number generation. This modern approach provides better randomness and flexibility in generating random numbers.
+  - Instead of using the older `rand()` function, the code employs `std::rand()` and `<random>` header for random number generation. This modern approach provides better randomness and flexibility in generating random numbers.[3]
 
 - **Concurrency with Threads (`std::thread`):**
   - The code uses `std::thread` to create multiple threads for simulating raindrops concurrently. This approach leverages modern C++ features for multithreading, enhancing performance and efficiency. [2]
 
 - **Exception Handling (try-catch blocks):**
-  - The code incorporates exception handling using `try-catch` blocks to gracefully handle runtime errors, such as exceptions thrown during the raindrop simulation or matrix printing. This ensures robustness and reliability of the program.
+  - The code incorporates exception handling using `try-catch` blocks to gracefully handle runtime errors, such as exceptions thrown during the raindrop simulation or matrix printing. This ensures robustness and reliability of the program.[1]
 
 - **Synchronization with Mutex (`std::mutex`):**
-  - The code employs `std::mutex` for synchronization, ensuring that access to shared resources (such as the console output) is properly coordinated among multiple threads. This prevents data races and ensures thread safety.
+  - The code employs `std::mutex` for synchronization, ensuring that access to shared resources (such as the console output) is properly coordinated among multiple threads. This prevents data races and ensures thread safety.[5]
 
 - **Use of Standard Library Utilities:**
-  - Standard library utilities like `std::this_thread::sleep_for` for introducing delays and `SetConsoleTextAttribute` for changing console text color are used. This demonstrates the utilization of existing C++ standard library functionalities to achieve desired behavior efficiently.
+  - Standard library utilities like `std::this_thread::sleep_for` for introducing delays and `SetConsoleTextAttribute` for changing console text color are used. This demonstrates the utilization of existing C++ standard library functionalities to achieve desired behavior efficiently.[2]
 
 - **Modern C++ Features (auto keyword, range-based for loops):**
-  - The code utilizes modern C++ features such as the `auto` keyword for automatic type deduction and range-based for loops for concise iteration over elements of containers. These features improve code readability and maintainability.
+  - The code utilizes modern C++ features such as the `auto` keyword for automatic type deduction and range-based for loops for concise iteration over elements of containers. These features improve code readability and maintainability.[1]
 
 - **Encapsulation with Namespaces:**
   - All functions and data related to the raindrop animation are encapsulated within the `MatrixFall` namespace. This promotes modularity, prevents naming conflicts, and enhances code organization and clarity.
-All functions and data related to the raindrop animation are encapsulated within the MatrixFall namespace. This promotes modularity, prevents naming conflicts, and enhances code organization and clarity.
+All functions and data related to the raindrop animation are encapsulated within the MatrixFall namespace. This promotes modularity, prevents naming conflicts, and enhances code organization and clarity.[1]
 
 -**A clean main function:**
-Towards the end of the project, after I had everything else working, I removed all unnecessary code and kept the main() function as clean as possible while retaining functionality. This is important to do as it provides a clear separation of concerns in my project and prevents the code from becoming confusing or unreadable. The main() function's sole purpose is to run the Rain functionality and its tests.
+Towards the end of the project, after I had everything else working, I removed all unnecessary code and kept the main() function as clean as possible while retaining functionality. This is important to do as it provides a clear separation of concerns in my project and prevents the code from becoming confusing or unreadable. The main() function's sole purpose is to run the Rain functionality and its tests.[1]
 
 <img src="https://raw.githubusercontent.com/PatrickHession02/digital-rain-cpp/main/docs/assets/images/Screenshot 2024-03-22 111744.png" width="600" height="400">
 
@@ -177,6 +200,13 @@ In conclusion, engaging in this project provided me with a profound learning opp
 [1] M. Lynch. “C++”, [Lecture], <mark>Digital Signal Processing</mark>, Galway-Mayo Institute of Technology, Galway, 2024.
 
 [2] Cpp Reference “std::thread”, [Online], <mark>cpp reference.com</mark>, Available: https://en.cppreference.com/w/cpp/thread/thread [Accessed]22/3/24
+
+[3]Cpp Reference “std::rand”, [Online], <mark>cppreference.com</mark>, Available: https://en.cppreference.com/w/cpp/thread/thread [Accessed]22/3/24
+
+[4]Cpp Reference “std::lock_guard”, [Online], <mark>cppreference.com</mark>, Available: https://en.cppreference.com/w/cpp/thread/lock_guard [Accessed]22/3/24
+
+[5]Cpp Reference “std::mutex”, [Online], <mark>cppreference.com</mark>, Available: https://en.cppreference.com/w/cpp/thread/mutex [Accessed]22/3/24
+
 
 
 
