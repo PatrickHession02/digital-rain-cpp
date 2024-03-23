@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C++ DIgital Rain
+title: C++ Digital Rain
 tags: cpp coding project
 categories: demo
 ---
