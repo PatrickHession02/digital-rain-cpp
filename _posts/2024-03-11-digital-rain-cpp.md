@@ -112,12 +112,13 @@ Similarly, the testPrintMatrixWithRaindrop() function evaluates the printMatrixW
 Due to the dynamic and randomized nature of the simulateRaindrop() function, direct testing is not feasible. Instead, the testSimulateRaindrop() function acknowledges this limitation and suggests visual inspection as a means to assess its behavior. 
 
 ```
-    void runAllTests() {
-        MatrixRainTest::testGetRandomChar();
-        MatrixRainTest::testPrintMatrixWithRaindrop();
-        MatrixRainTest::testSimulateRaindrop();
-    }
+void runAllTests() {
+MatrixRainTest::testGetRandomChar();
+MatrixRainTest::testPrintMatrixWithRaindrop();
+MatrixRainTest::testSimulateRaindrop();
+}
 ```
+    
 Finally, the runAllTests() function orchestrates the execution of all test functions within the namespace, ensuring comprehensive validation of the Matrix rain effect implementation. Each test function is invoked sequentially, and upon completion of all tests, a confirmation message is displayed to indicate successful testing completion.
 
 
