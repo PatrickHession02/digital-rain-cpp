@@ -14,7 +14,7 @@ Have you ever wondered how the iconic digital rain from the Matrix series could 
 ## Design and Test
 The code I've written implements threads and mutexes for efficient concurrency and synchronization. Initially, I had a single droplet simulated, but as the project progressed, I enhanced it by introducing threads to allow for multiple instances of the initial single droplet. However, during development, I encountered a bug that emerged due to race conditions, causing unexpected behavior in the raindrop animation. To address this issue, I incorporated a mutex, ensuring exclusive access to shared resources and preventing data corruption. Within a namespace I've defined, I initialize global variables representing the dimensions of a matrix simulating the console screen and the number of raindrops to animate. I've defined functions to generate random characters, simulate raindrop animation down specific columns of the matrix, and print the matrix with the raindrop effect, ensuring thread safety through mutex locking. The main functionality revolves around the simulateRaindrops() function, which spawns multiple threads to animate raindrops falling down various columns of the matrix.
 
- ````
+ ```cpp
  void simulateRaindrop(int raindropColumn) {
      try {
          std::vector<std::vector<char>> matrix(MATRIX_HEIGHT, std::vector<char>(MATRIX_WIDTH, ' '));
